@@ -1,0 +1,6 @@
+Products
+========
+
+.. toctree::
+
+    models

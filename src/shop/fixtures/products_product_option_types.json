@@ -1,0 +1,18 @@
+[
+{
+  "model": "products.product_option_types",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "optiontype": 1
+  }
+},
+{
+  "model": "products.product_option_types",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "optiontype": 2
+  }
+}
+]

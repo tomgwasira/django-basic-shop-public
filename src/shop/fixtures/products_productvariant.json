@@ -1,0 +1,26 @@
+[
+{
+  "model": "products.productvariant",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "supplier": 1,
+    "stock": 10,
+    "selling_price_currency": "ZAR",
+    "selling_price": "1300.00",
+    "discounted_price_currency": "ZAR",
+    "discounted_price": null,
+    "percentage_discount": null,
+    "created_at": "2022-02-18T13:48:49.825Z",
+    "updated_at": "2022-02-18T13:48:49.825Z",
+    "is_active": true,
+    "sku_no": "NCH-BLK-XS",
+    "is_form_validated": false,
+    "_order": 0,
+    "option_values": [
+      1,
+      3
+    ]
+  }
+}
+]

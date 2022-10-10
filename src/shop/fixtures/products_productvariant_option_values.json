@@ -1,0 +1,18 @@
+[
+{
+  "model": "products.productvariant_option_values",
+  "pk": 1,
+  "fields": {
+    "productvariant": 1,
+    "optionvalue": 1
+  }
+},
+{
+  "model": "products.productvariant_option_values",
+  "pk": 2,
+  "fields": {
+    "productvariant": 1,
+    "optionvalue": 3
+  }
+}
+]

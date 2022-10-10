@@ -1,0 +1,10 @@
+<!-- Product Page Nav -->
+<nav class="nav nav-pills flex-column flex-sm-row">
+  <button class="flex-sm-fill text-sm-center nav-link active" aria-current="page" onclick="displayProductAdminPageSection('general')">General</button>
+  <button class="flex-sm-fill text-sm-center nav-link" onclick="displayProductAdminPageSection('pricing_and_variants')">Pricing and Variants</button>
+</nav>
+<!-- /Product Page Nav -->
+
+<script type="text/javascript"
+      src="{% static 'admin/js/product_admin.js' %}">
+</script>

@@ -1,0 +1,35 @@
+[
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "NICCE Mens Capstan O/S Hood",
+    "slug": "nicce-mens-capstan-o-s-hood",
+    "sku_symbol": "NCH",
+    "description": "Capstan O/S hood in washed black. This oversized hooded sweatshirt features a small embroidered NICCE logo to center chest. In a light cotton fabric in washed-out tones. Wear with matching joggers or layer over denim. \r\n\r\nDetails:\r\nWashed black\r\nAdjustable drawstring hood\r\nCuffed sleeves and hem\r\nOversized fit\r\nFront pouch pocket\r\nEmbroidered NICCE logo\r\n100% COTTON",
+    "is_flagged": false,
+    "created_at": "2022-02-18T13:48:49.813Z",
+    "updated_at": "2022-02-18T13:56:39.553Z",
+    "is_active": true,
+    "min_price_currency": "ZAR",
+    "min_price": "1300.00",
+    "max_price_currency": "ZAR",
+    "max_price": "1300.00",
+    "min_price_original_currency": "ZAR",
+    "min_price_original": "1300.00",
+    "max_price_original_currency": "ZAR",
+    "max_price_original": "1300.00",
+    "is_form_validated": true,
+    "categories": [
+      6
+    ],
+    "brands": [
+      1
+    ],
+    "option_types": [
+      1,
+      2
+    ]
+  }
+}
+]

@@ -1,0 +1,55 @@
+[project]
+name = "django_shop"
+version = "0.1.0"
+description = "Generic Django online shop system and REST API."
+authors = [
+    "Thomas Gwasira <tomgwasira@gmail.com>"
+]
+license = "Proprietary"
+readme = "README.md"
+python = "^3.6"
+homepage = ""
+repository = ""
+documentation = ""
+
+# Requirements
+[dependencies]
+
+[dev-dependencies]
+black = { version = "^18.3-alpha.0", python = "^3.6" }
+
+[tool.isort]
+profile = "black"
+known_django = ["django"]
+known_restframework = ["rest_framework"]
+known_third_party = ["django_extensions", "djmoney", "nested_admin", "treebeard", "smart_selects"]
+known_first_party = ["apps", "tests", "shop"]
+import_heading_stdlib = "Standard library"
+import_heading_django = "Django library"
+import_heading_restframework = "Django REST Framework library"
+import_heading_thirdparty = "Third-party libraries"
+import_heading_firstparty = "Local application library"
+sections = ['FUTURE', 'STDLIB', 'DJANGO', 'RESTFRAMEWORK', 'THIRDPARTY', 'FIRSTPARTY', 'LOCALFOLDER']
+
+[tool.black]
+line-length = 78
+target_version = ['py36']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.env
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+  | blank.py           # also separately exclude a file named foo.py in
+                     # the root of the project
+)
+'''

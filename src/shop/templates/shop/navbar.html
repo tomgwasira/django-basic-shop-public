@@ -1,0 +1,66 @@
+<!-- Navbar Implementation -->
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Categories -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {% for main_category in main_categories %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ main_category.get_absolute_url }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ main_category.name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for sub_category in main_category.get_descendants %}
+                            <li><a class="dropdown-item" href="{{ sub_category.get_absolute_url }}">{{ sub_category.name }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            <!-- /Categories -->
+
+            <!-- Search -->
+            <form class="d-flex" action="{% url 'search:product_search_result' %}" method="GET">
+                {% csrf_token %}
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <!-- /Search -->
+
+            <!-- Cart -->
+            <a type="button" class="btn btn-secondary" href="{% url 'cart:cart_summary' %}">
+                <div>Cart</div>
+                <!-- cart is coming from the context processor -->
+                {% with cart_quantity=cart|length %}
+                    <div id="cart-quantity">
+                        {% if cart_quantity > 0 %}
+                            {{ cart_quantity }}
+                        {% else %} 
+                            0
+                        {% endif %}
+                    </div>
+                {% endwith %}
+            </a>
+            <!-- /Cart -->
+
+            <!-- User -->
+            {% if user.is_authenticated %}
+                Logged in as {{ user.email }} {{ user.id }}.
+                <a href="{% url 'users:customer_logout' %}?next={{ request.path }}">Log Out</a>
+                <a href="{% url 'users:customer_update' %}?next={{ request.path }}">Update Profile</a>
+                <a href="{% url 'users:customer_password_change' %}?next={{ request.path }}">Change Password</a>
+            {% else %}
+                <a href="{% url 'users:customer_signup' %}?next={{ request.path }}">Sign Up</a>
+                <a href="{% url 'users:customer_login' %}?next={{ request.path }}">Log In</a>
+            {% endif %}     
+            <!-- /User -->
+        </div>
+    </div>
+  </nav>
+  <!-- /Navbar -->

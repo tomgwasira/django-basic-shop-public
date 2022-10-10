@@ -1,0 +1,50 @@
+<!--
+  Cart Summary Page
+
+  Note:
+    * The CSS display attributes of div elements with ids "cart-empty-message-wrapper-1" and
+      "cart-summary-wrapper" are toggled in cart.js to display different divs when the cart is
+      empty.
+-->
+
+
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block title %}Cart{% endblock %}
+{% block header_scripts %}<script type="text/javascript" src="{% static 'cart/js/cart.js' %}"></script>{% endblock %}
+
+{% block page_content %}
+    <div id="cart-empty-message-wrapper-1" style="display: none;">
+        No items in the cart.
+    </div>
+    <div id="cart-summary-wrapper">
+        {% with cart_details=cart.cart_details %}
+            <h1>Cart total: {{ cart_details.cart_total }}</h1>
+            {% for cart_item in cart_details.cart_items %}
+                {% with product_variant=cart_item.product_variant %}
+                <div id="cart-item" data-index="{{ product_variant.id }}" class="cart-item-wrapper">
+                    <h5>{{ product_variant.product.name }}</h5>
+                    <h6>{{ product_variant.sku_no }}</h6>
+                    <h6>{{ cart_item.total_price }}</h6>
+                    <form method="POST" id="cart-action-form">
+                        {% csrf_token %}
+                        <input type="number" id="item-quantity-{{ product_variant.id }}" name="item-quantity" value="{{ cart_item.item_quantity }}" min="1" max="{{ product_variant.stock }}">
+                        <button type="button" id="update-cart-item-btn" data-url="{% url 'cart:cart_action' %}" data-product-variant-id="{{ product_variant.id }}" class="btn btn-outline-success update-cart-item-btn">Update</button>
+                        <button type="button" id="delete-cart-item-btn" data-url="{% url 'cart:cart_action' %}" data-product-variant-id="{{ product_variant.id }}" class="btn btn-danger delete-cart-item-btn">Delete</button>
+                    </form>
+                </div>
+                <button type="button"><a href="{% url 'orders:checkout' %}">Checkout</a></button>
+                {% endwith %}
+
+            {% empty %}
+                <div id="cart-empty-message-wrapper-2">
+                    No items in the cart.
+                </div>
+            {% endfor %}
+        {% endwith %}
+    </div>
+
+{% endblock %}
+

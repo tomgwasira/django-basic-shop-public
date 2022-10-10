@@ -1,0 +1,138 @@
+[
+{
+  "model": "products.productimage",
+  "pk": 1,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-1.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 0,
+    "alt_text": "black",
+    "is_featured": true,
+    "is_option_value_icon": true,
+    "created_at": "2022-02-18T13:48:49.820Z",
+    "updated_at": "2022-02-18T13:48:49.820Z",
+    "is_active": true,
+    "_order": 0
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 2,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-2.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 1,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.562Z",
+    "updated_at": "2022-02-18T13:56:39.562Z",
+    "is_active": true,
+    "_order": 1
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 3,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-3.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 2,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.564Z",
+    "updated_at": "2022-02-18T13:56:39.564Z",
+    "is_active": true,
+    "_order": 2
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 4,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-4.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 3,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.567Z",
+    "updated_at": "2022-02-18T13:56:39.567Z",
+    "is_active": true,
+    "_order": 3
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 5,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-5.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 4,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.569Z",
+    "updated_at": "2022-02-18T13:56:39.569Z",
+    "is_active": true,
+    "_order": 4
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 6,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-6.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 5,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.572Z",
+    "updated_at": "2022-02-18T13:56:39.572Z",
+    "is_active": true,
+    "_order": 5
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 7,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-7.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 6,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.574Z",
+    "updated_at": "2022-02-18T13:56:39.574Z",
+    "is_active": true,
+    "_order": 6
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 8,
+  "fields": {
+    "image": "img/product-images/nicce-mens-capstan-o-s-hood-black-8.jpg",
+    "product": 1,
+    "option_value": 1,
+    "index": 7,
+    "alt_text": null,
+    "is_featured": false,
+    "is_option_value_icon": false,
+    "created_at": "2022-02-18T13:56:39.577Z",
+    "updated_at": "2022-02-18T13:56:39.577Z",
+    "is_active": true,
+    "_order": 7
+  }
+}
+]

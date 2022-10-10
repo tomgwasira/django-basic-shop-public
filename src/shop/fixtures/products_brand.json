@@ -1,0 +1,13 @@
+[
+{
+  "model": "products.brand",
+  "pk": 1,
+  "fields": {
+    "name": "NICCE",
+    "index": 2,
+    "created_at": "2022-02-18T13:46:15.104Z",
+    "updated_at": "2022-02-18T13:46:15.104Z",
+    "is_active": true
+  }
+}
+]

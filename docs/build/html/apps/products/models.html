@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Models &mdash; Django Online Shop 0.1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Products" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Django Online Shop
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../apps.html">Apps</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Products</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Models</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-apps.products.models.product_models">Product Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-apps.products.models.image_models">Image Models</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Django Online Shop</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../apps.html">Apps</a> &raquo;</li>
+          <li><a href="index.html">Products</a> &raquo;</li>
+      <li>Models</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/apps/products/models.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="models">
+<h1>Models<a class="headerlink" href="#models" title="Permalink to this headline"></a></h1>
+<section id="module-apps.products.models.product_models">
+<span id="product-models"></span><h2>Product Models<a class="headerlink" href="#module-apps.products.models.product_models" title="Permalink to this headline"></a></h2>
+<p>Models for the Products app.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Brand">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">Brand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Brand" title="Permalink to this definition"></a></dt>
+<dd><p>Brand of a product.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Brand.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.Brand.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Brand.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.Brand.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">Category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Category" title="Permalink to this definition"></a></dt>
+<dd><p>Category of a product.</p>
+<p>The database table generated from this class makes uses of the
+<a class="reference external" href="https://django-treebeard.readthedocs.io/en/latest/">django-treebeard</a> nested set model for a hierachical organisation of
+objects such that categories may have parent and/or children categories.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.Category.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.Category.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category.get_absolute_url">
+<span class="sig-name descname"><span class="pre">get_absolute_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Category.get_absolute_url" title="Permalink to this definition"></a></dt>
+<dd><p>Return a URL for the <code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code>.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>str: URL for the</dt><dd><p><a href="#id1"><span class="problematic" id="id2">:py:model:`~apps.products.product_models.Category`</span></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category.get_ancestors_and_self">
+<span class="sig-name descname"><span class="pre">get_ancestors_and_self</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Category.get_ancestors_and_self" title="Permalink to this definition"></a></dt>
+<dd><p>Return list with current
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code> and its ancestors.
+Use <a class="reference external" href="https://django-treebeard.readthedocs.io/en/latest/">django-treebeard</a>’s <code class="docutils literal notranslate"><span class="pre">get_ancestors</span></code> if you don’t want to
+include the current <code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code>.
+itself.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>list: List with current
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code> and its
+ancestors.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Category.get_descendants_and_self">
+<span class="sig-name descname"><span class="pre">get_descendants_and_self</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Category.get_descendants_and_self" title="Permalink to this definition"></a></dt>
+<dd><p>Return list with current
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code> and its descendants.
+Use <a class="reference external" href="https://django-treebeard.readthedocs.io/en/latest/">django-treebeard</a>’s <code class="docutils literal notranslate"><span class="pre">get_ancestors</span></code> if you don’t want to
+include the current <code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code>.
+itself.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>list: List with current</dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code> and its
+descendants.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">OptionType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.OptionType" title="Permalink to this definition"></a></dt>
+<dd><p>Type of a product variation e.g. size, volume etc.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionType.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.OptionType.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionType.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.OptionType.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionValue">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">OptionValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.OptionValue" title="Permalink to this definition"></a></dt>
+<dd><p>Value of a type of a product variation e.g. small, 100 ml etc.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionValue.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.OptionValue.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.OptionValue.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.OptionValue.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Product">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Product" title="Permalink to this definition"></a></dt>
+<dd><p>Basic product.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Product.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.Product.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Product.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.Product.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Product.get_absolute_url">
+<span class="sig-name descname"><span class="pre">get_absolute_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Product.get_absolute_url" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a URL for the
+<a href="#id5"><span class="problematic" id="id6">:py:model:`~apps.products.product_models.Product`</span></a>
+object.</p>
+<dl class="simple">
+<dt>Returns:</dt><dd><dl class="simple">
+<dt>str: URL for the</dt><dd><p><a href="#id7"><span class="problematic" id="id8">:py:model:`~apps.products.product_models.Product`</span></a>
+object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">ProductType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.ProductType" title="Permalink to this definition"></a></dt>
+<dd><dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductType.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.ProductType.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductType.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.ProductType.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductVariant">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">ProductVariant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.ProductVariant" title="Permalink to this definition"></a></dt>
+<dd><p>Variant of a particular product.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductVariant.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.ProductVariant.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductVariant.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.ProductVariant.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductVariant.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.ProductVariant.clean" title="Permalink to this definition"></a></dt>
+<dd><p>Validates
+<a href="#id9"><span class="problematic" id="id10">:py:model:`~apps.products.product_models.ProductVariant`</span></a> model.</p>
+<dl>
+<dt>This method performs the following:</dt><dd><ol class="arabic simple">
+<li><p>Checks that if both are specified, there is no conflict</p></li>
+</ol>
+<blockquote>
+<div><p>between the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">discounted_price</span></code>
+and the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">percentage_discount</span></code>
+attribute values.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Checks that</p></li>
+</ol>
+<blockquote>
+<div><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">discounted_price</span></code>
+is not greater or equal to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">selling_price</span></code></p>
+</div></blockquote>
+</dd>
+<dt>Raises:</dt><dd><dl class="simple">
+<dt>ValidationError: If there is a conflict between</dt><dd><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">discounted_price</span></code>
+and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">percentage_discount</span></code></p>
+</dd>
+<dt>ValidationError: If</dt><dd><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">discounted_price</span></code>
+is greater or equal to
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">selling_price</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt>Note:</dt><dd><p>If
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">discounted_price</span></code>
+is 0, it is considered to be blank.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.ProductVariant.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.ProductVariant.save" title="Permalink to this definition"></a></dt>
+<dd><p>Overrides the
+<a href="#id11"><span class="problematic" id="id12">:py:model:`~apps.products.product_models.ProductVariant`</span></a>
+<code class="docutils literal notranslate"><span class="pre">save</span></code> method to perform additional routines.</p>
+<dl class="simple">
+<dt>This method performs the following:</dt><dd><ol class="arabic simple">
+<li><p>Populates either
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">apps.products.product_models.ProductVariant.discounted_price</span></code>
+or
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">apps.products.product_models.ProductVariant.percentage_discount</span></code>
+if one of the attributes is blank while the other is not.
+The blank attribute is populated based on the value of
+the populated one.</p></li>
+</ol>
+</dd>
+<dt>Warning:</dt><dd><p>A
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">apps.products.product_models.ProductVariant.discounted_price</span></code>
+of value 0 is considered <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Supplier">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">Supplier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Supplier" title="Permalink to this definition"></a></dt>
+<dd><p>Supplier of a product variant.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Supplier.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.Supplier.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Supplier.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.Supplier.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Tag">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.product_models.</span></span><span class="sig-name descname"><span class="pre">Tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Tag" title="Permalink to this definition"></a></dt>
+<dd><p>Tag for a product.</p>
+<p>Tags are to be used in recommendation and search engines within the
+shop.</p>
+<dl class="simple">
+<dt>Comment:</dt><dd><p>Products have a one to many relationship with tags. A many to
+many relationship was also an option; however, creation of tags
+is to be done using an inline in the
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ProductAdmin</span></code> and many
+to many relationships do not allow for object creation.</p>
+</dd>
+</dl>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Tag.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.product_models.Tag.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Tag.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.product_models.Tag.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="apps.products.models.product_models.Tag.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.product_models.Tag.save" title="Permalink to this definition"></a></dt>
+<dd><p>Overrides the
+<a href="#id13"><span class="problematic" id="id14">:py:model:`~apps.products.product_models.Tag`</span></a>
+<code class="docutils literal notranslate"><span class="pre">save</span></code>.</p>
+<p>This method converts all characters in
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code>
+to lowercase.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-apps.products.models.image_models">
+<span id="image-models"></span><h2>Image Models<a class="headerlink" href="#module-apps.products.models.image_models" title="Permalink to this headline"></a></h2>
+<p>Models for images associated with models in the <strong>products</strong> app.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.image_models.CategoryHeroImage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.image_models.</span></span><span class="sig-name descname"><span class="pre">CategoryHeroImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.image_models.CategoryHeroImage" title="Permalink to this definition"></a></dt>
+<dd><p>Hero image for a
+<a class="reference internal" href="#apps.products.models.product_models.Category" title="apps.products.models.product_models.Category"><code class="xref py py-class docutils literal notranslate"><span class="pre">Category</span></code></a></p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.image_models.CategoryHeroImage.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.image_models.CategoryHeroImage.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.image_models.CategoryHeroImage.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.image_models.CategoryHeroImage.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="apps.products.models.image_models.ProductImage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">apps.products.models.image_models.</span></span><span class="sig-name descname"><span class="pre">ProductImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#apps.products.models.image_models.ProductImage" title="Permalink to this definition"></a></dt>
+<dd><p>Image of a
+<a href="#id15"><span class="problematic" id="id16">:py:model:`~apps.products.models.product_models.Product`</span></a>.</p>
+<p>This is used only on the thumbnails for the
+<a href="#id17"><span class="problematic" id="id18">:py:model:`~apps.products.models.product_models.Product`</span></a>
+and in the case where images of a
+<a href="#id19"><span class="problematic" id="id20">:py:model:`~apps.products.models.product_models.ProductVariant`</span></a>
+are not added.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.image_models.ProductImage.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#apps.products.models.image_models.ProductImage.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="apps.products.models.image_models.ProductImage.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#apps.products.models.image_models.ProductImage.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Products" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Thomas Gwasira.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

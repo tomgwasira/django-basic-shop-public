@@ -1,0 +1,185 @@
+<!--
+  Product Detail Page
+
+  TODO: preselection is query pass the variable.
+  This pre-selects the first OptionType's first OptionValue which implies
+  that the images corresponding to that are displayed,
+  selected_options JS collection is initialised with that OptionType-OptionValue pairing
+  selected marker ring is shown around the OptionValue
+-->
+
+
+
+{% extends 'shop/base.html' %}
+
+{% load static %}
+ 
+{% block title %}
+{{ product.name }}
+{% endblock %}
+
+{% block header_scripts %}
+<script type="text/javascript" src="{% static 'products/js/products.js' %}"></script>
+{% endblock %}
+
+{% block page_content %}
+
+<h1 class="text-center" style="margin-top: 3%;">{{ product.name }}</h1>
+
+<!-- Product Images -->
+<!-- ProductImages without OptionValues -->
+<div class="product-images-no-option-values-wrapper">
+  {% for product_image in product_images_no_option_values %}
+      <div class="product-image">
+        <img src="{{ product_image.image.url }}" style="height: 100px;">
+      </div>
+  {% endfor %}
+</div>
+
+{% for option_item in options %}
+  {% for option_value_item in option_item.option_value_items %}
+    <!-- Every OptionValue will have a wrapper containing its images whether the images are empty or not -->
+    <div id="product-images-wrapper-{{ option_value_item.option_value.id }}" class="product-images-with-option-values-wrapper" style="display: none;">
+      {% for product_image in option_value_item.product_images %}
+        <div class="product-image">
+          <img src="{{ product_image.image.url }}" style="height: 100px;">
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+{% endfor %}
+<!-- /Product Images -->
+
+<!-- Options -->
+<!-- 
+  Use forloop.counter to indicate position of option type instead of 
+  index because index is to be used for ordering in database not on
+  template. If used on template, there would be anomalous behaviour
+  when two option types have same index. 
+-->
+<div>
+  {% for option_item in options %}
+    <!-- First OptionType's OptionValue buttons should be enabled -->
+    {% if forloop.counter == 1 %}
+      <div
+        class="option-item-wrapper"
+        data-option_type_name="{{ option_item.option_type.name }}"
+        data-option_item_pos="{{ forloop.counter }}">
+        <h2>{{ option_item.option_type.name }}</h2>
+        {% for option_value_item in option_item.option_value_items %}
+          <div class="option-value-wrapper">
+            <button
+              id="option-value-btn-{{ option_value_item.option_value.id }}"
+              class="option-value-btn"
+              type="button"
+              data-option_value_id="{{ option_value_item.option_value.id }}"
+              data-option_value_name="{{ option_value_item.option_value.name }}"
+              data-product_id="{{ product.id }}"
+              data-url="{% url 'products:option_value_selection' %}">
+              <!-- If OptionValue has ProductImages, display first image in queryset -->
+              {% if option_value_item.product_images %}
+              <img src="{{ option_value_item.product_images.0.image.url }}" style="height: 50px;">
+              <!-- Otherwise display name of the OptionValue -->
+              {% else %}
+              {{ option_value_item.option_value.name }}
+              {% endif %}
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+    
+    <!-- Disable all other OptionType OptionValue buttons -->
+    {% else %}
+      <div
+        class="option-item-wrapper"
+        data-option_type_name="{{ option_item.option_type.name }}"
+        data-option_item_pos="{{ forloop.counter }}">
+        <h2>{{ option_item.option_type.name }}</h2>
+        {% for option_value_item in option_item.option_value_items %}
+          <div class="option-value-wrapper">
+            <button
+              id="option-value-btn-{{ option_value_item.option_value.id }}"
+              class="option-value-btn"
+              type="button"
+              data-option_value_id="{{ option_value_item.option_value.id }}"
+              data-option_value_name="{{ option_value_item.option_value.name }}"
+              data-product_id="{{ product.id }}"
+              data-url="{% url 'products:option_value_selection' %}"
+              disabled>
+              <!-- If OptionValue has ProductImages, display first image in queryset -->
+              {% if option_value_item.product_images %}
+                <img src="{{ option_value_item.product_images.0.image.url }}" style="height: 10px;">
+              <!-- Otherwise display name of the OptionValue -->
+              {% else %}
+                {{ option_value_item.option_value.name }}
+              {% endif %}
+            </button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+<!-- /Options -->
+
+<!-- Add to Cart -->
+<!-- Changing state of sessions database -->
+<form method="POST" id="cart-action-form">
+  {% csrf_token %}
+  <!-- If Product has OptionTypes (implying ProductVariant(s) with OptionValues) -->
+  {% if options %}
+    <input
+      type="number"
+      id="item-quantity"
+      name="item-quantity"
+      value="1"
+      min="1"
+      max="1">
+    <button
+      type="button"
+      id="add-cart-item-btn"
+      data-no_of_variants="0"
+      data-product_variant_id="Null"
+      data-url="{% url 'cart:cart_action' %}"
+      value=""
+      class="btn btn-primary">
+      Add to Cart
+    </button>
+  <!-- If Product doesn't have OptionTypes (implying a single ProductVariant without OptionValues)-->
+  {% else %}
+    <input
+      type="number"
+      id="item-quantity"
+      name="item-quantity"
+      value="1"
+      min="1"
+      max="{{ no_options_product_variants_data.perceived_stock }}">
+    <button
+    type="button"
+    id="add-cart-item-btn"
+    data-no_of_variants="1"
+    data-product_variant_id="{{ no_options_product_variants_data.product_variant_id }}"
+    data-url="{% url 'cart:cart_action' %}"
+    value=""
+    class="btn btn-danger">
+    Add to Cart
+    </button>
+  {% endif %}
+</form>
+<!-- /Add to Cart -->
+
+<script>
+// Automatically select the OptionValue to be pre-selected from context
+// Note this function cannot be moved outside of the template as it requires a context variable
+$(document).ready(function() {
+  // Not too much of a train smash if pre-selection doesn't happen,
+  // user can just manually select. It just won't look too great because
+  // the images would be missing.
+  if ("{{ preselected_option_value_id }}") {
+    console.log("{{ preselected_option_value_id }}")
+    document.getElementById('option-value-btn-{{ preselected_option_value_id }}').click();
+    console.log(selected_options)
+  }
+})
+</script>
+{% endblock %}

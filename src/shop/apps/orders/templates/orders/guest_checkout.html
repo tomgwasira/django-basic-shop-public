@@ -1,0 +1,12 @@
+<!-- Guest Customer Checkout Page -->
+<h1>Guest Checkout</h1>
+<form method="post" id="member-chekout-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ guest_customer_user_form.as_p }}
+    {{ guest_customer_profile_inline_formset.as_p }}
+    {{ guest_customer_address_inline_formset.as_p }}
+
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <input type="submit" value="Place Order">
+</form>

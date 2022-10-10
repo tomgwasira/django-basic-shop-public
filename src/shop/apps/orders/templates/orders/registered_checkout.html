@@ -1,0 +1,9 @@
+<!-- Registered Customer Checkout Page -->
+<form method="post" id="member-chekout-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ address_form.as_p }}
+
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <input type="submit" value="Place Order">
+</form>

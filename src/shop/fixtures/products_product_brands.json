@@ -1,0 +1,10 @@
+[
+{
+  "model": "products.product_brands",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "brand": 1
+  }
+}
+]

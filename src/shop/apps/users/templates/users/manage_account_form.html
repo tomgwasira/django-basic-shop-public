@@ -1,0 +1,41 @@
+<!-- Manage Account Page -->
+
+{% extends 'shop/base.html' %}
+
+{% load static %}
+ 
+{% block title %}Manage Account{% endblock %}
+
+{% block header_scripts %}
+<script type="text/javascript" src="{% static 'users/js/users.js' %}"></script>
+{% endblock %}
+
+{% block page_content %}
+<!-- Profile Update Form -->
+<form method="post"> 
+  {% csrf_token %}
+  {{ form.as_p }}
+  {{ customer_change_inline_formset.as_p }} 
+  <input type="submit" value="Save">
+</form>
+<!-- /Profile Update Form-->
+
+<!-- Delete User Button -->
+<!--
+  The actual action performed is deactivation of the account until
+  such a time when it is ready to be deleted.
+-->
+<!-- 
+  Might want to move whole Delete section to separate page.
+  would be a waste of space though.  
+-->
+<button type="button" id="deactivate-customer-account-btn">Delete Account</button>
+<!-- /Delete User Button -->
+
+<!-- Delete User Confirmation -->
+<!-- Will need to implement this as a pop-up triggered by delete-customer-account-btn -->
+<h3>Are you sure you want to delete your account?</h3>
+<button type="button" id="cancel-deactivate-customer-account-btn">Cancel</button>
+<button type="button" id="confirm-deactivate-customer-account-btn" data-url="{% url 'users:customer_deactivate' %}">Delete</button>
+<!-- /Delete User Confirmation -->
+{% endblock %}

@@ -1,0 +1,53 @@
+<!-- Product Listing Page -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Generic Online Shop HTML5 Template</title> <!-- Consider replacing this with the name of the store or category. -->
+    <meta name="description" content="A simple HTML5 Template for new projects.">
+    <meta name="author" content="SitePoint">
+    
+    <meta property="og:title" content="A Basic HTML5 Template">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:image" content="image.png">
+    
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- Include navbar here. -->
+    <!-- /Navbar -->
+    
+    <!-- Search Result Product List -->
+    <h1> Search Result Product List</h1>
+    {% if search_text %}
+    Search result for {{ search_text }}
+    {% endif %}
+    
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products matching {{ search_text }} are available.</p>
+    {% endif %}
+    <!-- /Search Result Product List -->
+
+  <!-- Scripts -->
+  <!-- Add scripts here -->
+  <!-- /Scripts -->
+</body>
+</html>

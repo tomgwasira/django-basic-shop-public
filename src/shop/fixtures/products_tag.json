@@ -1,0 +1,32 @@
+[
+{
+  "model": "products.tag",
+  "pk": 1,
+  "fields": {
+    "name": "hoodie",
+    "product": 1,
+    "created_at": "2022-02-18T13:48:49.821Z",
+    "updated_at": "2022-02-18T13:48:49.821Z"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 2,
+  "fields": {
+    "name": "drawstring",
+    "product": 1,
+    "created_at": "2022-02-18T13:48:49.822Z",
+    "updated_at": "2022-02-18T13:48:49.822Z"
+  }
+},
+{
+  "model": "products.tag",
+  "pk": 3,
+  "fields": {
+    "name": "oversized",
+    "product": 1,
+    "created_at": "2022-02-18T13:48:49.822Z",
+    "updated_at": "2022-02-18T13:48:49.822Z"
+  }
+}
+]

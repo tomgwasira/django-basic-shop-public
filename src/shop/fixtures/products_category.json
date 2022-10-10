@@ -1,0 +1,130 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "lft": 1,
+    "rgt": 12,
+    "tree_id": 1,
+    "depth": 1,
+    "name": "Men",
+    "slug": "men",
+    "description": "",
+    "created_at": "2022-02-18T13:29:22.803Z",
+    "updated_at": "2022-02-18T13:29:22.809Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "lft": 1,
+    "rgt": 2,
+    "tree_id": 2,
+    "depth": 1,
+    "name": "Women",
+    "slug": "women",
+    "description": "",
+    "created_at": "2022-02-18T13:29:34.576Z",
+    "updated_at": "2022-02-18T13:29:34.585Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "lft": 1,
+    "rgt": 2,
+    "tree_id": 3,
+    "depth": 1,
+    "name": "Kids",
+    "slug": "kids",
+    "description": "",
+    "created_at": "2022-02-18T13:29:59.270Z",
+    "updated_at": "2022-02-18T13:29:59.278Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "lft": 2,
+    "rgt": 3,
+    "tree_id": 1,
+    "depth": 2,
+    "name": "Tops",
+    "slug": "tops",
+    "description": "",
+    "created_at": "2022-02-18T13:31:54.918Z",
+    "updated_at": "2022-02-18T13:31:54.927Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "lft": 4,
+    "rgt": 5,
+    "tree_id": 1,
+    "depth": 2,
+    "name": "Bottoms",
+    "slug": "bottoms",
+    "description": "",
+    "created_at": "2022-02-18T13:32:06.039Z",
+    "updated_at": "2022-02-18T13:32:06.047Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "lft": 6,
+    "rgt": 7,
+    "tree_id": 1,
+    "depth": 2,
+    "name": "Hoodies and Sweatshirts",
+    "slug": "hoodies-and-sweatshirts",
+    "description": "Whether you're taking it back to basics or making a statement on the street, find next level comfort courtesy of our latest hooded jumpers and sweatshirts. Whatever cut, colour, fit and fabric you’re after, we’ve got you covered.",
+    "created_at": "2022-02-18T13:32:43.149Z",
+    "updated_at": "2022-02-18T13:34:16.327Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "lft": 8,
+    "rgt": 9,
+    "tree_id": 1,
+    "depth": 2,
+    "name": "Shoes",
+    "slug": "shoes",
+    "description": "",
+    "created_at": "2022-02-18T13:33:06.031Z",
+    "updated_at": "2022-02-18T13:33:06.040Z",
+    "is_active": true
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "lft": 10,
+    "rgt": 11,
+    "tree_id": 1,
+    "depth": 2,
+    "name": "Accessories",
+    "slug": "accessories",
+    "description": "",
+    "created_at": "2022-02-18T13:33:19.171Z",
+    "updated_at": "2022-02-18T13:33:19.180Z",
+    "is_active": true
+  }
+}
+]

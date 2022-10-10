@@ -1,0 +1,64 @@
+<!-- Product Listing Page -->
+{% extends 'shop/base.html' %}
+
+{% load static %}
+
+{% block title %}
+  {% if category %}
+    {{ category.name }}
+  {% else %}
+    All Products
+  {% endif %}
+{% endblock %}
+
+{% block page_content %}
+  <!-- Header -->
+  {% if category %}
+    <h1 class="text-center" style="margin-top: 3%;">{{ category.name }}</h1>
+    <div class="text-center">
+      {{ category.description }}
+    </div>
+  {% else %}
+    <h1 class="text-center" style="margin-top: 3%;">All Products</h1>
+  {% endif %}
+  <!-- /Header -->
+
+  <!-- Product List -->
+  <div>
+    {% for product in products %}
+      <div class="col-3" style="margin-top: 2%;;">
+        <div class="card product-wrapper" style="width: 15rem;">
+          {% if product.product_images.all %}
+            <img src="{{ product.product_images.all.0.image.url }}">
+          {% else %}
+            <img src="{% static 'products/img/place_holder.jpg' %}">
+          {% endif %}
+          <h5 class="product-name"><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></h5>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center" style="margin-top: 5%;">No products are available.</p>
+    {% endfor %}
+  </div>
+  <!-- /Product List -->
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+    </span>
+  </div>
+  <!-- /Pagination -->
+{% endblock %}
